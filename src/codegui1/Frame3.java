@@ -12,6 +12,7 @@ import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
@@ -61,15 +62,22 @@ public class Frame3 extends JFrame {
         con.add(lblkl);
         con.add(txtkl);
         
-        DefaultTableModel tblModelds = new DefaultTableModel();
-        tblModelds.setColumnIdentifiers(new String[]{"Tên Dịch Vụ"});
+        String[] columnNames = {"Type"};
+        String[] data = {"Buy"};
+        DefaultTableModel tblModel = new DefaultTableModel();
+        tblModel.setColumnIdentifiers(columnNames);
+        tblModel.addRow(data);
+        //tbldsdv = new JTable(tblModelds);
         
-        tbldsdv.setModel(tblModelds);
+        tbldsdv.setModel(tblModel);
+        tbldsc.setModel(tblModel);
+        
         tbldsdv.setVisible(true);
-        tbldsdv.setSize(200,100);
+        tbldsc.setVisible(true);
         
+
         con.add(lbldsdv);
-        con.add(tbldsdv);
+        add(tbldsdv);
         con.add(lblbsc);
         con.add(tbldsc);
         

@@ -17,7 +17,7 @@ public class CodeGui1 {
     public static void main(String[] args) {
         // TODO code application logic here
         //Frame1 a = new Frame1();
-        Frame2 b = new Frame2();
+        Frame3 b = new Frame3();
     }
     
 }
